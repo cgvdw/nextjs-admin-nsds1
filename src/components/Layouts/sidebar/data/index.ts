@@ -27,16 +27,16 @@ export const NAV_DATA = [
         items: [],
       },
       {
-        title: "Forms",
+        title: "Settings",
         icon: Icons.Alphabet,
         items: [
           {
-            title: "Form Elements",
-            url: "/forms/form-elements",
+            title: "Xero Integration",
+            url: "/forms/xero-integration",
           },
           {
-            title: "Form Layout",
-            url: "/forms/form-layout",
+            title: "FNB Integration",
+            url: "/forms/fnb-integration",
           },
         ],
       },
