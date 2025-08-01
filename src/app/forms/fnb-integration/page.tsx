@@ -1,29 +1,31 @@
-import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-
 import type { Metadata } from "next";
-import { ContactForm } from "./_components/contact-form";
-import { SignInForm } from "./_components/sign-in-form";
-import { SignUpForm } from "./_components/sign-up-form";
+
+import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
+import { FNBIntegrationForm } from "./_components/fnb-integration-form";
+import { IntegrationsList } from "./_components/integrations-list";
 
 export const metadata: Metadata = {
-  title: "Form Layout",
+  title: "FNB Integration",
 };
 
-export default function Page() {
+export default function FNBIntegrationPage() {
   return (
     <>
-      <Breadcrumb pageName="Form Layout" />
+      <Breadcrumb pageName="FNB Integration" />
 
-      <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
-        <div className="flex flex-col gap-9">
-          <ContactForm />
+      <div className="max-w-4xl mx-auto space-y-8">
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold text-dark dark:text-white mb-2">
+            FNB Integration Setup
+          </h1>
+          <p className="text-dark-4 dark:text-dark-6">
+            Configure your FNB integration settings. This will store your credentials securely in the database.
+          </p>
         </div>
 
-        <div className="flex flex-col gap-9">
-          <SignInForm />
-
-          <SignUpForm />
-        </div>
+        <FNBIntegrationForm />
+        
+        <IntegrationsList />
       </div>
     </>
   );
